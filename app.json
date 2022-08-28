@@ -1,30 +1,30 @@
 {
-  "name": "You Need Music",
+  "name": "Lion Music Downloader ",
   "description": "A simple Telegram bot to download music.",
   "keywords": [
     "bot",
     "music",
     "music downloader"
   ],
-  "repository": "https://github.com/rozari0/NeedMusicRobot/",
-  "website": "https://t.me/NeedMusicRobot",
-  "success_url": "https://t.me/NeedMusicRobot",
+  "repository": "https://github.com/alexx745alejandro/lion-Music-downloader-/",
+  "website": "https://t.me/lionmusicdownloader_bot",
+  "success_url": "https://t.me/lionmusicdownloader_bot",
   "env": {
     "API_ID": {
       "description": "Your Telegram API ID",
-      "value": ""
+      "value": "18049084"
     },
     "API_HASH": {
       "description": "Get this value from my.telegram.org! Please do not steal",
-      "value": ""
+      "value": "7e74b1e22026fcc291d32b3d431aa21e"
     },
     "BOT_TOKEN": {
       "description": "Make a bot at http://telegram.dog/BotFather and get the token of your bot.Worth it. Get it.",
-      "value": ""
+      "value": "5662923906:AAGgkn1CsW6OuCOTQJq-tNqKsqFx7PwUDus"
     },
     "OWNER_ID": {
       "description": "The ID of the owner of the bot",
-      "value": ""
+      "value": "5033264822"
     },
     "SUDO_USERS": {
       "description": "The ID of the sudo users of the bot",
@@ -38,7 +38,7 @@
     },
     "LOG_GROUP": {
       "description": "The ID of the group to log to",
-      "value": "",
+      "value": "1720232464",
       "required": false
     },
     "SPOTIPY_CLIENT_SECRET": {
