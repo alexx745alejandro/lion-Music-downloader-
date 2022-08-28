@@ -37,7 +37,7 @@ from mbot.utils.ytdl import audio_opt, getIds, thumb_down, ytdl_down
     & filters.chat(AUTH_CHATS)
 )
 async def _(_, message):
-    m = await message.reply_text("Gathering information... Please Wait.")
+    m = await message.reply_text("Bilgi toplanıyor... Lütfen Bekleyin.")
     link = message.matches[0].group(0)
     if link in [
         "https://youtube.com/",
@@ -45,9 +45,9 @@ async def _(_, message):
         "https://youtu.be/",
         "https://youtu.be",
     ]:
-        return await m.edit_text("Please send a valid playlist or video link.")
+        return await m.edit_text("Lütfen geçerli bir oynatma listesi veya video bağlantısı gönderin.")
     elif "channel" in link or "/c/" in link:
-        return await m.edit_text("**Channel** Download Not Available. ")
+        return await m.edit_text("**Channel** İndirilemiyor. ")
     try:
         ids = await getIds(message.matches[0].group(0))
         videoInPlaylist = len(ids)
