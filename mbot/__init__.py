@@ -45,7 +45,7 @@ try:
     BOT_TOKEN = environ["BOT_TOKEN"]
     OWNER_ID = int(environ["OWNER_ID"])
 except KeyError:
-    LOGGER.debug("One or More ENV variable not found.")
+    LOGGER.debug("Bir veya Daha Fazla ENV değişkeni bulunamadı.")
     sys.exit(1)
 # Optional Variable
 SUDO_USERS = environ.get("SUDO_USERS", str(OWNER_ID)).split()
