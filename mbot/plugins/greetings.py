@@ -67,11 +67,11 @@ async def start(client, message):
         and message.from_user.id not in SUDO_USERS
     ):
         return await message.reply_text(
-            "This Bot Will Not Work In Groups Unless It's Authorized.",
+            "Bu Bot Yetkilendirilmedikçe Gruplarda Çalışmaz.",
             reply_markup=InlineKeyboardMarkup(reply_markup),
         )
     return await message.reply_text(
-        f"Hello {message.from_user.first_name}, I'm a Simple Music Downloader Bot. I Currently Support Download from Youtube.",
+        f"Merhaba {message.from_user.first_name},Ben Lion Music Downloader Botuyum. Şu anda Youtube'dan İndirmeyi Destekliyorum.",
         reply_markup=InlineKeyboardMarkup(reply_markup),
     )
 
@@ -94,16 +94,16 @@ async def ping(client, message):
     start = datetime.now()
     await client.send(Ping(ping_id=0))
     ms = (datetime.now() - start).microseconds / 1000
-    await message.reply_text(f"**Pong!**\nResponse time: `{ms} ms`")
+    await message.reply_text(f"**Pong!**\nYanıt süresi: `{ms} ms`")
 
 
 HELP = {
-    "Youtube": "Send **Youtube** Link in Chat to Download Song.",
-    "Spotify": "Send **Spotify** Track/Playlist/Album/Show/Episode's Link. I'll Download It For You.",
-    "Deezer": "Send Deezer Playlist/Album/Track Link. I'll Download It For You.",
-    "Jiosaavn": "Not Implemented yet",
-    "SoundCloud": "Not Implemented yet",
-    "Group": "Will add later.",
+    "Youtube": "Şarkıyı İndirmek için Sohbette **Youtube** Bağlantısını Gönderin.",
+    "Spotify": "**Spotify** Parça/Çalma Listesi/Albüm/Şov/Bölüm Bağlantısını Gönderin. Sizin İçin İndireceğim.",
+    "Deezer": "Deezer Çalma Listesi/Albüm/Parça Bağlantısı gönder. Sizin İçin İndireceğim.",
+    "Jiosaavn": "Henüz Uygulanmadı",
+    "SoundCloud": "Henüz Uygulanmadı",
+    "Group": "Daha sonra eklenecek.",
 }
 
 
@@ -114,7 +114,7 @@ async def help(_, message):
     ]
 
     await message.reply_text(
-        f"Hello **{message.from_user.first_name}**, I'm **@NeedMusicRobot**.\nI'm Here to download your music.",
+        f"Hello **{message.from_user.first_name}**, Ben **@lionmusicdownloader_bot**.\nMüziğinizi indirmek için buradayım.",
         reply_markup=InlineKeyboardMarkup(button),
     )
 
@@ -135,6 +135,6 @@ async def help_home(_, query):
         [InlineKeyboardButton(text=i, callback_data=f"help_{i}")] for i in HELP
     ]
     await query.message.edit(
-        f"Hello **{query.from_user.first_name}**, I'm **@NeedMusicRobot**.\nI'm Here to download your music.",
+        f"Hello **{query.from_user.first_name}**, Ben **@lionmusicdownloader_bot**.\nMüziğinizi indirmek için buradayım.",
         reply_markup=InlineKeyboardMarkup(button),
     )
