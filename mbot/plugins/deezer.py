@@ -50,7 +50,7 @@ async def link_handler(_, message):
         items = await parse_deezer_url(link)
         item_type = items[0]
         item_id = items[1]
-        m = await message.reply_text("Gathering information... Please Wait.")
+        m = await message.reply_text("Bilgi toplanıyor... Lütfen Bekleyin.")
         songs = await fetch_tracks(client, item_type, item_id)
         if item_type in ["playlist", "album", "track"]:
             randomdir = f"/tmp/{str(randint(1,100000000))}"
@@ -58,7 +58,7 @@ async def link_handler(_, message):
             for song in songs:
                 PForCopy = await message.reply_photo(
                     song.get("cover"),
-                    caption=f"🎧 Title : `{song['name']}`\n🎤 Artist : `{song['artist']}`\n💽 Album : `{song['album']}`\n💽 Song Number : `{song['playlist_num']}`",
+                    caption=f"🎧 Başlık : `{song['name']}`\n🎤 Sanatçı : `{song['artist']}`\n💽 Albüm : `{song['album']}`\n💽 Şarkı numarası : `{song['playlist_num']}`",
                 )
                 path = await download_songs(song, randomdir)
                 thumbnail = await thumb_down(
@@ -78,9 +78,9 @@ async def link_handler(_, message):
             await m.delete()
         elif item_type == "artist":
             await m.edit_text(
-                "This Is An Artist Account Link. Send me Track, Playlist or Album Link :)"
+                "Bu Bir Sanatçı Hesabı Bağlantısıdır. Bana Parça, Çalma Listesi veya Albüm Bağlantısı gönder :)"
             )
         else:
-            await m.edit_text("Link Type Not Available for Download.")
+            await m.edit_text("Bağlantı Türü İndirilebilir Değil.")
     except Exception as e:
         await m.edit_text(f"Error: {e}", quote=True)
