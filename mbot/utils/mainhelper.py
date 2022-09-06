@@ -63,7 +63,7 @@ def thumb_down(link, name):
 @sync_to_async
 def fetch_tracks(dz, item_type, item_id):
     """
-    Fetches tracks from the provided URL.
+    Sağlanan URL'den parçaları getirir.
     """
     songs_list = []
     offset = 0
@@ -140,7 +140,7 @@ def fetch_tracks(dz, item_type, item_id):
 @sync_to_async
 def fetch_spotify_track(client, item_id):
     """
-    Fetch tracks from provided item.
+    Sağlanan öğeden parçaları getir.
     """
     item = client.track(track_id=item_id)
     track_name = item.get("name")
