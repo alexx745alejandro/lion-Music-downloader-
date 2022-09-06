@@ -47,7 +47,7 @@ async def _(_, message):
     ]:
         return await m.edit_text("Lütfen geçerli bir oynatma listesi veya video bağlantısı gönderin.")
     elif "channel" in link or "/c/" in link:
-        return await m.edit_text("**Channel** İndirilemiyor. ")
+        return await m.edit_text("**Kanal** İndirilemiyor. ")
     try:
         ids = await getIds(message.matches[0].group(0))
         videoInPlaylist = len(ids)
@@ -56,7 +56,7 @@ async def _(_, message):
         for id in ids:
             PForCopy = await message.reply_photo(
                 f"https://i.ytimg.com/vi/{id[0]}/hqdefault.jpg",
-                caption=f"🎧 Title : `{id[3]}`\n🎤 Artist : `{id[2]}`\n💽 Track No : `{id[1]}`\n💽 Total Track : `{videoInPlaylist}`",
+                caption=f"🎧 Başlık : `{id[3]}`\n🎤 Sanatçı : `{id[2]}`\n💽 Parça No : `{id[1]}`\n💽 Toplam Parça : `{videoInPlaylist}`",
             )
             fileLink = await ytdl_down(audio_opt(randomdir, id[2]), id[0])
             thumnail = await thumb_down(id[0])
