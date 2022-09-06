@@ -63,7 +63,7 @@ async def spotify_dl(_, message):
             for item in items:
                 PForCopy = await message.reply_photo(
                     item[5],
-                    caption=f"✔️ Episode Name : `{item[3]}`\n🕔 Duration : {item[4]//60}:{item[4]%60}",
+                    caption=f"✔️ Bölüm Adı : `{item[3]}`\n🕔 Dakika : {item[4]//60}:{item[4]%60}",
                 )
                 fileLink = await ytdl_down(
                     audio_opt(randomdir, item[2]),
@@ -85,7 +85,7 @@ async def spotify_dl(_, message):
             song = await fetch_spotify_track(client, item_id)
             PForCopy = await message.reply_photo(
                 song.get("cover"),
-                caption=f"🎧 Title : `{song['name']}`\n🎤 Artist : `{song['artist']}`\n💽 Album : `{song['album']}`\n🎼 Genre : `{song['genre']}`\n🗓 Release Year: `{song['year']}`",
+                caption=f"🎧 Başlık : `{song['name']}`\n🎤 Sanatçı : `{song['artist']}`\n💽 Albüm : `{song['album']}`\n🎼 Tür : `{song['genre']}`\n🗓 Çıkış tarihi: `{song['year']}`",
             )
             path = await download_songs(song, randomdir)
             thumbnail = await thumb_down(song.get("cover"), song.get("name"))
@@ -111,7 +111,7 @@ async def spotify_dl(_, message):
                 )
                 PForCopy = await message.reply_photo(
                     song.get("cover"),
-                    caption=f"🎧 Title : `{song['name']}`\n🎤 Artist : `{song['artist']}`\n💽 Album : `{song['album']}`\n🎼 Genre : `{song['genre']}`\n🗓 Release Year: `{song['year']}`\n🔢 Track No: `{track_no}`\n🔢 Total Track: `{total_tracks}`",
+                    caption=f"🎧 Başlık : `{song['name']}`\n🎤 Sanatçı : `{song['artist']}`\n💽 Albüm : `{song['album']}`\n🎼 Tür : `{song['genre']}`\n🗓 Çıkış Tarihi: `{song['year']}`\n🔢 Şarkı No: `{track_no}`\n🔢 Toplam İzlenme: `{total_tracks}`",
                 )
                 path = await download_songs(song, randomdir)
                 thumbnail = await thumb_down(
@@ -134,7 +134,7 @@ async def spotify_dl(_, message):
                 song = await fetch_spotify_track(client, track.get("id"))
                 PForCopy = await message.reply_photo(
                     song.get("cover"),
-                    caption=f"🎧 Title : `{song['name']}`\n🎤 Artist : `{song['artist']}`\n💽 Album : `{song['album']}`\n🎼 Genre : `{song['genre']}`\n🗓 Release Year: `{song['year']}`",
+                        caption=f"🎧 Başlık : `{song['name']}`\n🎤 Sanatçı : `{song['artist']}`\n💽 Albüm : `{song['album']}`\n🎼 Tür : `{song['genre']}`\n🗓 Çıkış tarihi: `{song['year']}`",
                 )
                 path = await download_songs(song, randomdir)
                 thumbnail = await thumb_down(
