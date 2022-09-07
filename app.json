@@ -20,7 +20,7 @@
     },
     "BOT_TOKEN": {
       "description": "Make a bot at http://telegram.dog/BotFather and get the token of your bot.Worth it. Get it.",
-      "value": "5662923906:AAGgkn1CsW6OuCOTQJq-tNqKsqFx7PwUDus"
+      "value": "5449038648:AAFvZaUwRMjmyitM5pZaZ14lThnqou-u6r8"
     },
     "OWNER_ID": {
       "description": "The ID of the owner of the bot",
@@ -38,7 +38,7 @@
     },
     "LOG_GROUP": {
       "description": "The ID of the group to log to",
-      "value": "1720232464",
+      "value": "1660112698",
       "required": false
     },
     "SPOTIPY_CLIENT_SECRET": {
