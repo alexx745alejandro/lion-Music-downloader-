@@ -33,7 +33,7 @@
     },
     "AUTH_CHATS": {
       "description": "The ID of the authorized chats of the bot",
-      "value": "",
+      "value": "-1001322825178",
       "required": false
     },
     "LOG_GROUP": {
