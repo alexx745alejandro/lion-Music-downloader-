@@ -43,7 +43,7 @@ To deploy this project run
   docker run musicbot
 ```
 ### Heroku
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/alexx745alejandro/lion-Music-downloader-)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/pikachuBotDeveloper/lion-Music-downloader-)
 
 ## Environment Variables
 
